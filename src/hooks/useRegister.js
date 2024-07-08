@@ -1,7 +1,4 @@
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth/web-extension";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import { auth } from "../firebase/firebaseConfig";
 import { useState } from "react";
@@ -23,4 +20,6 @@ export const useRegister = () => {
       setIspending(false);
     }
   };
+
+  return { isPending, registerWithGoogle };
 };
